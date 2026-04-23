@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore location="Verona" manager="Pietro Sirchia">
+    <book category="cooking" id="b1">
+        <title lang="it">Cucina Veneta</title>
+        <author>Giuseppe Rossi</author>
+        <publication>
+            <year>2018</year>
+            <publisher>Edizioni Nord</publisher>
+        </publication>
+        <inventory>
+            <price currency="EUR">35.00</price>
+            <stock>12</stock>
+        </inventory>
+    </book>
+    <book category="children" id="b2">
+        <title lang="en">Harry Potter</title>
+        <author>J.K. Rowling</author>
+        <publication>
+            <year>2005</year>
+            <publisher>Bloomsbury</publisher>
+        </publication>
+        <inventory>
+            <price currency="EUR">29.99</price>
+            <stock>0</stock>
+        </inventory>
+    </book>
+    <book category="web" cover="paperback" id="b3">
+        <title lang="en">Learning XML Advanced</title>
+        <author>Erik T. Ray</author>
+        <author>Jane Doe</author>
+        <author>John Smith</author>
+        <publication>
+            <year>2023</year>
+            <publisher>O'Reilly</publisher>
+        </publication>
+        <inventory>
+            <price currency="USD">45.00</price>
+            <stock>5</stock>
+        </inventory>
+    </book>
+</bookstore>

@@ -19,16 +19,18 @@
         let parser = new DOMParser(); //creazione parser
         let xmlDoc = parser.parseFromString(xmlStr, "text/xml");
 
-        let stocks = xmlDoc.getElementsByTagName("stock");
-        for (let i = 0; i < stocks.length; i++) {
-            if (stocks[i].childNodes[0].nodeValue === "0") {
-                let inventory = stocks[i].parentNode;
-                let priceNode = inventory.getElementsByTagName("price")[0];
-                // Modifica testo e attributo
+        let publication = xmlDoc.getElementsByTagName("publication");
+        let anno = publication.getElementsByTagName("year")
+        for (let i = 0; i < anno.length; i++) {
+            if (anno[i].nodeValue < 2010 ) {
+                // rimozione nodo
                 priceNode.childNodes[0].nodeValue = "Fuori Stampa";
                 priceNode.setAttribute("currency", "N/A");
             }
         }
+
+        //TODO: altro loop per aggiungere discount
+
 
         document.getElementById("display").textContent = new XMLSerializer().serializeToString(xmlDoc);
     </script>

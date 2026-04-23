@@ -24,8 +24,8 @@
         for (let i = 0; i < anno.length; i++) {
             if (anno[i].nodeValue < 2010 ) {
                 // rimozione nodo
-                priceNode.childNodes[0].nodeValue = "Fuori Stampa";
-                priceNode.setAttribute("currency", "N/A");
+                figlio = anno.parentNode
+                xmlDoc.documentElement.removeChild(figlio); 
             }
         }
 
